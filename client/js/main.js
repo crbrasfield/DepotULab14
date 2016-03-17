@@ -1,5 +1,12 @@
-//Use to instantiate app, connect factory & controllers and configure app.
-
-var app = angular.module('', []);
-
-app.config([]);
+var app = angular.module('myApp', ['myApp.controllers', 'myApp.factories', 'ngRoute']);
+app.config(['$routeProvider', function($routeProvider) {
+    $routeProvider
+        .when('/', {
+            templateUrl: 'views/blogposts.html',
+            controller: 'BlogpostController'
+        })
+        .when('/post', {
+            templateUrl: 'views/newpost.html',
+            controller: 'NewpostController'
+        });
+}]);
