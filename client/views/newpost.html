@@ -1,6 +1,8 @@
-<form>
-    <input id="post-title" ng-model="titleVal" type="text" placeholder="Title">
-    <input id="post-author" ng-model="authorVal" type="text" placeholder="Author">
-    <input id="post-content" ng-model="contentVal" placeholder = "Post goes here">
+<div class="container">
+    <form id="blog-post-form">
+    <input id="post-title" ng-model="titleVal" type="text" placeholder="Title"><br>
+    <input id="post-author" ng-model="authorVal" type="text" placeholder="Author"><br>
+    <textarea id="post-content" ng-model="contentVal" placeholder = "Post goes here"></textarea><br>
 </form>
-<button ng-click="submitPost()">Submit</button>
+<button id="submit-button"ng-click="submitPost()">Submit</button>
+<div>

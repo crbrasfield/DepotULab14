@@ -8,5 +8,11 @@ app.config(['$routeProvider', function($routeProvider) {
         .when('/post', {
             templateUrl: 'views/newpost.html',
             controller: 'NewpostController'
-        });
+        })
+        .when('/post/:id', {
+            templateUrl: 'views/blogpostsingle.html',
+            controller: 'SinglepostController'
+        })
+        ;
+        
 }]);
